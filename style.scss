@@ -99,7 +99,7 @@ body {
             font-size: 20px;
             background-color: #141414;
             border: 5px solid white;
-            margin-bottom:30px;
+            margin-bottom: 30px;
         }
 
         .proyectos {
@@ -111,28 +111,32 @@ body {
             flex-wrap: wrap;
             justify-content: center;
             align-items: center;
-            span{
-                margin:50px;
-                font-size:80px;
+
+            span {
+                margin: 50px;
+                font-size: 80px;
                 font-weight: bold;
                 font-style: italic;
             }
+
             .proyecto {
                 height: 700px;
                 padding: 80px 150px;
                 border: 5px solid white;
                 background-color: #141414;
-                margin-bottom:50px;
+                margin-bottom: 50px;
                 display: flex;
                 flex-flow: column;
                 flex-wrap: nowrap;
                 justify-content: center;
                 align-items: center;
-                span{
+
+                span {
                     font-weight: bold;
-                    font-size:30px;
+                    font-size: 30px;
                 }
-                p{
+
+                p {
                     text-align: justify;
                 }
 
@@ -140,7 +144,7 @@ body {
                     width: 100%;
                     height: 400px;
                 }
-                
+
             }
         }
 
@@ -152,12 +156,14 @@ body {
             flex-wrap: wrap;
             justify-content: center;
             align-items: center;
-            span{
-                margin:50px;
-                font-size:80px;
+
+            span {
+                margin: 50px;
+                font-size: 80px;
                 font-weight: bold;
                 font-style: italic;
             }
+
             .artista {
                 display: flex;
                 flex-flow: row;
@@ -203,6 +209,7 @@ body {
                 }
             }
         }
+
         .badbunny {
             border: 2px solid white;
 
