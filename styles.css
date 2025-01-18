@@ -261,6 +261,7 @@ footer {
   width: 100%;
   padding: 20px;
   text-align: center;
+  border-top:3px solid white;
 }
 
 footer .redessociales a {
