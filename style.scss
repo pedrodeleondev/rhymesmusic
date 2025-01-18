@@ -299,12 +299,14 @@ footer .redessociales a:hover {
     .nav li {
         padding: 10px 15px;
     }
+
     .descripcion {
         margin: 10px;
         font-size: 0.9rem;
     }
 
-    .proyectos span, .artistas span {
+    .proyectos span,
+    .artistas span {
         font-size: 2rem;
     }
 
@@ -328,7 +330,7 @@ footer .redessociales a:hover {
 /* DISEÑO PARA PANTALLAS CON ANCHO MAXIMO DE 768PX */
 
 @media (max-width: 768px) {
-    
+
     header {
         padding: 10px;
     }
@@ -387,11 +389,13 @@ footer .redessociales a:hover {
     .nav li {
         padding: 5px 10px;
     }
+
     .descripcion {
         font-size: 0.7rem;
     }
 
-    .proyectos span, .artistas span {
+    .proyectos span,
+    .artistas span {
         font-size: 1.5rem;
     }
 
