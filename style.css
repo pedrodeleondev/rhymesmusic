@@ -1,309 +1,375 @@
+@charset "UTF-8";
+/* IMPORTS PARA LA TIPOGRAFIA Y NORMALIZAR EL CSS */
 @import url("https://necolas.github.io/normalize.css/8.0.1/normalize.css");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+/* ESTILOS GENERALES */
 * {
   font-family: "Poppins", serif;
   font-weight: 400;
   font-style: normal;
   color: white;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
   background-color: #1c1c1c;
 }
-body .contenedor {
+
+/* DISEÑO PARA EL CONTENEDOR DE TODO */
+.contenedor {
   position: relative;
   width: 100%;
-  height: 100%;
   display: flex;
-  flex-flow: column;
-  flex-wrap: nowrap;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
 }
-body .contenedor header {
+
+/* DISEÑO PARA EL ENCABEZADO */
+header {
   position: relative;
   width: 100%;
-  height: 350px;
   display: flex;
-  flex-flow: column;
-  flex-wrap: nowrap;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image: url("https://rimasmusic.com/static/media/header.7f2072d3.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  flex-wrap: wrap;
+  background-color: #141414;
+  border-bottom: 3px solid white;
+  padding: 20px 10px;
+  box-sizing: border-box;
 }
-body .contenedor header .fondonegro {
-  position: absolute;
-  left: 0;
-  top: 0;
-  opacity: 0.7;
-  width: 100%;
-  height: 100%;
-  background-color: black;
-}
-body .contenedor header .nombre {
-  z-index: 123;
-  padding-top: 40px;
-  font-family: "Poppins", serif;
+
+.nombre {
+  z-index: 1;
   font-weight: 900;
   font-style: italic;
-  font-size: 350%;
-  margin-left: 40px;
-}
-body .contenedor header .nav {
-  display: flex;
-  flex-flow: row;
-  list-style: none;
-}
-body .contenedor header .nav li {
-  margin: 10px;
+  font-size: 3rem;
+  text-align: center;
   padding: 20px;
-  color: white;
+}
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 10px 0;
+}
+
+.nav li {
+  margin: 10px;
+  padding: 10px 20px;
   position: relative;
   transition: 0.5s all;
 }
-body .contenedor header .nav li::after {
+
+.nav li::after {
   content: "";
   background-color: white;
   position: absolute;
-  width: 0%;
+  width: 0;
   height: 3px;
   left: 45%;
   bottom: 0;
   transition: 0.5s all;
 }
-body .contenedor header .nav li:hover::after {
+
+.nav li:hover::after {
   left: 0;
   width: 100%;
 }
-body .contenedor header .nav li a {
-  transition: 0.5s all;
+
+.nav a {
   text-decoration: none;
-}
-body .contenedor .descripcion {
-  padding: 50px;
-  margin-left: 200px;
-  margin-right: 200px;
-  text-align: justify;
-  font-size: 20px;
-  background-color: #141414;
-  border: 5px solid white;
-  margin-bottom: 30px;
-}
-body .contenedor .proyectos {
-  width: 70%;
-  position: relative;
-  display: flex;
-  flex-flow: column;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-}
-body .contenedor .proyectos span {
-  margin: 50px;
-  font-size: 80px;
-  font-weight: bold;
-  font-style: italic;
-}
-body .contenedor .proyectos .proyecto {
-  height: 700px;
-  padding: 80px 150px;
-  border: 5px solid white;
-  background-color: #141414;
-  margin-bottom: 50px;
-  display: flex;
-  flex-flow: column;
-  flex-wrap: nowrap;
-  justify-content: center;
-  align-items: center;
-}
-body .contenedor .proyectos .proyecto span {
-  font-weight: bold;
-  font-size: 30px;
-}
-body .contenedor .proyectos .proyecto p {
-  text-align: justify;
-}
-body .contenedor .proyectos .proyecto img {
-  width: 100%;
-  height: 400px;
-}
-body .contenedor .artistas {
-  margin-top: 50px;
-  width: 60%;
-  display: flex;
-  flex-flow: column;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-}
-body .contenedor .artistas span {
-  margin: 50px;
-  font-size: 80px;
-  font-weight: bold;
-  font-style: italic;
-}
-body .contenedor .artistas .artista {
-  display: flex;
-  flex-flow: row;
-  width: 100%;
-  background-color: #141414;
-  border: 3px solid white;
-  transition: 0.5s all;
-  margin-bottom: 30px;
-}
-body .contenedor .artistas .artista:hover {
-  border: 3px solid #1c1c1c;
-  background-color: white;
-}
-body .contenedor .artistas .artista:hover .dataArtista span, body .contenedor .artistas .artista:hover .dataArtista p {
-  color: black;
-}
-body .contenedor .artistas .dataArtista {
   color: white;
-  width: 80%;
-  display: flex;
-  flex-flow: column;
-  justify-content: center;
-  align-items: center;
-}
-body .contenedor .artistas .dataArtista span {
-  font-family: "Poppins", serif;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 30px;
   transition: 0.5s all;
 }
-body .contenedor .artistas .dataArtista p {
-  padding-left: 50px;
-  padding-right: 50px;
+
+/* DISEÑO PARA LA DESCRIPCION */
+.descripcion {
+  padding: 20px;
+  margin: 20px;
   text-align: justify;
-  transition: 0.5s all;
-}
-body .contenedor .badbunny {
+  font-size: 1rem;
+  background-color: #141414;
   border: 2px solid white;
 }
-body .contenedor .badbunny:hover .fotobadbunny {
-  background-size: 500px 500px;
-}
-body .contenedor .badbunny .fotobadbunny {
-  width: 40%;
-  height: 300px;
-  background-position: center;
-  background-image: url("https://i.scdn.co/image/ab6761610000517481f47f44084e0a09b5f0fa13");
-  background-size: 300px 300px;
-  transition: 0.5s all;
-}
-body .contenedor .omarcourtz {
-  border: 2px solid white;
-}
-body .contenedor .omarcourtz:hover .fotoomarcourtz {
-  background-size: 500px 500px;
-}
-body .contenedor .omarcourtz .fotoomarcourtz {
-  width: 40%;
-  height: 300px;
-  background-position: center;
-  background-image: url("https://yt3.googleusercontent.com/hdioVye5CRVuxJ_xQEk5ahHWuKC_8yZQVj5VMkucvG_lYTgGjTtCchuXFF5zsSA8E11ksNplRVg=s900-c-k-c0x00ffffff-no-rj");
-  background-size: 300px 300px;
-  transition: 0.5s all;
-}
-body .contenedor .jhayco {
-  border: 2px solid white;
-}
-body .contenedor .jhayco:hover .fotojhayco {
-  background-size: 500px 500px;
-}
-body .contenedor .jhayco .fotojhayco {
-  width: 40%;
-  height: 300px;
-  background-position: center;
-  background-image: url("https://images.genius.com/79fb0f0fe10a96205020ee6aa1c65226.1000x1000x1.png");
-  background-size: 300px 300px;
-  transition: 0.5s all;
-}
-body .contenedor form {
-  background-color: #141414;
-  border: 3px solid white;
-  padding: 40px;
+
+/* DISEÑO PARA LA SECCION DE PROYECTOS */
+.proyectos {
+  width: 90%;
   display: flex;
-  flex-flow: column;
-  justify-content: center;
-  align-items: center;
-}
-body .contenedor form b {
-  font-size: 30px;
-  text-align: center;
-}
-body .contenedor form input[type=text],
-body .contenedor form input[type=email],
-body .contenedor form textarea {
-  background-color: transparent;
-  border: none;
-  border-bottom: 3px solid white;
-  transition: 0.2s all;
-  resize: none;
-  margin: 15px;
-  width: 100%;
-}
-body .contenedor form input[type=text]::placeholder,
-body .contenedor form input[type=email]::placeholder,
-body .contenedor form textarea::placeholder {
-  color: white;
-}
-body .contenedor form input[type=text]:focus,
-body .contenedor form input[type=email]:focus,
-body .contenedor form textarea:focus {
-  color: black;
-  background-color: white;
-}
-body .contenedor form input[type=text]:focus::placeholder,
-body .contenedor form input[type=email]:focus::placeholder,
-body .contenedor form textarea:focus::placeholder {
-  color: black;
-}
-body .contenedor form textarea {
-  height: 200px;
-}
-body .contenedor form input[type=submit] {
-  cursor: pointer;
-  transition: 0.5s all;
-  width: 30%;
-  height: 50px;
-  border-radius: 10px;
-  background-color: white;
-  border: 3px solid black;
-  color: black;
-  font-size: 20px;
-}
-body .contenedor form input[type=submit]:hover {
-  background-color: black;
-  color: white;
-  border: 3px solid white;
-  transform: scale(1.2);
-}
-body .contenedor footer {
-  margin-top: 50px;
-  display: flex;
-  flex-flow: column;
-  background-color: #141414;
-  width: 100%;
-  height: 10%;
-  padding-top: 50px;
-  padding-bottom: 50px;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
 }
 
-.fa-brands {
-  font-size: 20px;
+.proyectos span {
+  margin: 20px;
+  font-size: 2.5rem;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.proyecto {
+  width: 100%;
+  padding: 20px;
+  margin-bottom: 20px;
+  border: 2px solid white;
+  background-color: #141414;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.proyecto span {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.proyecto p {
+  text-align: justify;
+  font-size: 0.9rem;
+}
+
+.proyecto img {
+  width: 100%;
+  height: auto;
+  margin-top: 10px;
+}
+
+/* DISEÑO PARA LA SECCION DE ARTISTAS */
+.artistas {
+  margin-top: 20px;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.artistas span {
+  margin: 20px;
+  font-size: 2.5rem;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.artista {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: #141414;
+  border: 2px solid white;
+  margin-bottom: 20px;
+  padding: 10px;
+  text-align: center;
+}
+
+.artista:hover {
+  background-color: white;
+  border: 2px solid #1c1c1c;
+}
+
+.artista:hover .dataArtista span,
+.artista:hover .dataArtista p {
+  color: black;
+}
+
+.dataArtista {
+  margin: 10px 0;
+}
+
+.dataArtista span {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.dataArtista p {
+  text-align: justify;
+  font-size: 0.9rem;
+}
+
+/* DISEÑO PARA FORMULARIO */
+form {
+  width: 90%;
+  background-color: #141414;
+  border: 2px solid white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+form b {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+form label {
+  margin-top: 20px;
+  align-self: flex-start;
+}
+
+form input[type=text],
+form input[type=email],
+form textarea {
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid white;
+  margin: 10px 0;
+  width: 100%;
+  padding: 5px;
+  color: white;
+  resize: none;
+}
+
+form input[type=text]:focus,
+form input[type=email]:focus,
+form textarea:focus {
+  color: black;
+  background-color: white;
+  outline: none;
+}
+
+form input[type=submit] {
+  margin-top: 20px;
+  cursor: pointer;
+  transition: 0.5s all;
+  width: 50%;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: white;
+  border: 2px solid black;
+  color: black;
+  font-size: 1rem;
+}
+
+form input[type=submit]:hover {
+  background-color: black;
+  color: white;
+  border: 2px solid white;
+  transform: scale(1.1);
+}
+
+/* DISEÑO PARA PIE DE PAGINA */
+footer {
+  margin-top: 20px;
+  background-color: #141414;
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+}
+
+footer .redessociales a {
+  font-size: 1.5rem;
   margin: 5px;
   transition: 0.2s all;
 }
-.fa-brands:hover {
-  transform: rotate(-20deg) scale(1.4);
+
+footer .redessociales a:hover {
+  transform: rotate(-20deg) scale(1.2);
+}
+
+/* DISEÑO PARA PANTALLAS CON ANCHO MAXIMO DE 1024PX */
+@media (max-width: 1024px) {
+  header {
+    padding: 15px 10px;
+  }
+  .nombre {
+    font-size: 2.5rem;
+  }
+  .nav {
+    flex-wrap: wrap;
+  }
+  .nav li {
+    padding: 10px 15px;
+  }
+  .descripcion {
+    margin: 10px;
+    font-size: 0.9rem;
+  }
+  .proyectos span, .artistas span {
+    font-size: 2rem;
+  }
+  .proyecto {
+    padding: 10px;
+  }
+  .proyecto p {
+    font-size: 0.8rem;
+  }
+  form {
+    padding: 10px;
+  }
+  form input[type=submit] {
+    width: 70%;
+  }
+}
+/* DISEÑO PARA PANTALLAS CON ANCHO MAXIMO DE 768PX */
+@media (max-width: 768px) {
+  header {
+    padding: 10px;
+  }
+  .nombre {
+    font-size: 2rem;
+  }
+  .nav {
+    flex-direction: column;
+    align-items: center;
+  }
+  .nav li {
+    margin: 5px 0;
+    padding: 8px 15px;
+  }
+  .nav {
+    flex-direction: column;
+    align-items: center;
+  }
+  .nombre {
+    font-size: 2rem;
+  }
+  .descripcion {
+    font-size: 0.8rem;
+  }
+  .proyecto img {
+    height: auto;
+  }
+  .artista {
+    flex-direction: column;
+  }
+  form input[type=submit] {
+    width: 100%;
+  }
+}
+/* DISEÑO PARA PANTALLAS CON ANCHO MAXIMO DE 480PX */
+@media (max-width: 480px) {
+  header {
+    padding: 10px;
+  }
+  .nombre {
+    font-size: 1.5rem;
+    padding: 10px 0;
+  }
+  .nav li {
+    padding: 5px 10px;
+  }
+  .descripcion {
+    font-size: 0.7rem;
+  }
+  .proyectos span, .artistas span {
+    font-size: 1.5rem;
+  }
+  .proyecto p {
+    font-size: 0.7rem;
+  }
+  .dataArtista span {
+    font-size: 1rem;
+  }
+  .dataArtista p {
+    font-size: 0.7rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -11,10 +11,9 @@
 <body>
     <div class="contenedor">
         <header id="home">
-            <div class="fondonegro"></div>
             <span class="nombre">Rhymes Music</span>
             <ul class="nav">
-                <li><a href="">Inicio</a></li>
+                <li><a href="index.html">Inicio</a></li>
                 <li><a href="#proyectos">Proyectos</a></li>
                 <li><a href="#artistas">Artistas</a></li>
                 <li><a href="#contacto">Contacto</a></li>
@@ -73,7 +72,6 @@
         <section id="artistas" class="artistas">
             <span>Artistas</span>
             <article class="badbunny artista">
-                <div class="fotoartista fotobadbunny"></div>
                 <div class="dataArtista">
                     <span>Bad Bunny</span>
                     <p>Bad Bunny es un cantante, compositor y productor puertorriqueño que ha revolucionado la música
@@ -89,10 +87,8 @@
                         fresco, versátil y su capacidad para conectar con el público. Su talento lo ha posicionado como
                         una de las promesas emergentes más relevantes dentro del género.</p>
                 </div>
-                <div class="fotoartista fotoomarcourtz"></div>
             </article>
             <article class="jhayco artista">
-                <div class="fotoartista fotojhayco"></div>
                 <div class="dataArtista">
                     <span>Jhayco</span>
                     <p>Jhayco es un cantante y compositor puertorriqueño de reguetón y música urbana, conocido por
@@ -103,9 +99,12 @@
         </section>
         <form id="contacto" action="#">
             <b>Contacto</b>
-            <input type="text" name="nombre" id="nombre" placeholder="Nombre" required>
-            <input type="email" name="email" id="email" placeholder="Email" required>
-            <textarea name="mensaje" id="mensaje" placeholder="Mensaje"></textarea>
+            <label for="nombre">Nombre</label>
+            <input type="text" name="nombre" id="nombre" placeholder="Introduce tu nombre" required>
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" placeholder="Introduce un email" required>
+            <label for="mensaje">Mensaje</label>
+            <textarea name="mensaje" id="mensaje" placeholder="Introduce un mensaje" required></textarea>
             <input type="submit" value="Enviar">
         </form>
         <footer>
