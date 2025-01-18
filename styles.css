@@ -337,6 +337,7 @@ footer .redessociales a:hover {
   }
   .proyecto img {
     height: auto;
+    width:80%;
   }
   .artista {
     flex-direction: column;
